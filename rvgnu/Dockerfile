@@ -1,5 +1,9 @@
 FROM ubuntu:24.04
 
+LABEL org.opencontainers.image.source=https://github.com/qiujiandong/riscv-container
+LABEL org.opencontainers.image.description="An image with RISC-V GNU GCC newlib toolchain and QEMU"
+LABEL org.opencontainers.image.licenses="Apache-2.0"
+
 WORKDIR /wksp
 VOLUME ["/wksp"]
 
