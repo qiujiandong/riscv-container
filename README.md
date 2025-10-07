@@ -1,5 +1,7 @@
 # RISCV Container
 
+[![Build rvgnu Docker Image](https://github.com/qiujiandong/riscv-container/actions/workflows/rvgnu.yml/badge.svg)](https://github.com/qiujiandong/riscv-container/actions/workflows/rvgnu.yml)
+
 ## Workflow
 
 How I update the `rvgnu` docker image in this repo?
