@@ -1,6 +1,6 @@
 FROM ubuntu:24.04
 
-ARG PREBUILT_TOOLS_VERSION=v0.1.1
+ARG PREBUILT_TOOLS_TAG=2025.09.28
 
 LABEL org.opencontainers.image.source=https://github.com/qiujiandong/riscv-container
 LABEL org.opencontainers.image.description="An image with RISC-V GNU GCC newlib toolchain and QEMU"
@@ -26,7 +26,7 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=Asia/Shanghai \
 ENV PREBUILT_TOOLS_ROOT=/opt/riscv
 ENV PATH=${PREBUILT_TOOLS_ROOT}/bin:$PATH
 RUN mkdir -p ${PREBUILT_TOOLS_ROOT} && \
-    wget -qO- -L https://github.com/qiujiandong/riscv-container/releases/download/${PREBUILT_TOOLS_VERSION}/prebuilt_tools_${PREBUILT_TOOLS_VERSION}.tar.xz | \
+    wget -qO- -L https://github.com/qiujiandong/riscv-container/releases/download/v1.0.0-rc/prebuilt_tools_${PREBUILT_TOOLS_TAG}.tar.xz | \
     tar -xJvf - -C ${PREBUILT_TOOLS_ROOT} --strip-components=1
 
 ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
